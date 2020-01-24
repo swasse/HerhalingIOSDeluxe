@@ -91,7 +91,7 @@
                             <outletCollection property="gestureRecognizers" destination="5g3-5B-bxk" appends="YES" id="J2I-Da-trB"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="BTW" id="r6m-PO-aaz"/>
+                    <tabBarItem key="tabBarItem" title="BTW" image="dollarsign.circle" catalog="system" id="r6m-PO-aaz"/>
                     <connections>
                         <outlet property="btwSC" destination="11R-9M-wEp" id="6fB-EP-tPT"/>
                         <outlet property="priceTf" destination="COX-L5-9PT" id="hel-xa-VSS"/>
@@ -303,7 +303,7 @@
         <scene sceneID="nXw-mr-Rph">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CQc-lV-CSw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Expenses" id="Is7-GS-1XW"/>
+                    <tabBarItem key="tabBarItem" title="Expenses" image="calendar" catalog="system" id="Is7-GS-1XW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="fD4-JS-MT3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -324,4 +324,8 @@
             <point key="canvasLocation" x="1017.3913043478261" y="454.6875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="64" height="52"/>
+        <image name="dollarsign.circle" catalog="system" width="64" height="60"/>
+    </resources>
 </document>
