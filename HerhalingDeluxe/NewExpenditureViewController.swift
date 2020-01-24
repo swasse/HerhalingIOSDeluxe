@@ -22,9 +22,8 @@ class NewExpenditureViewController: UIViewController {
     @IBAction func saveExpenditure(_ sender: Any) {
         if let description = descriptionTF.text, let price = Double(priceTF.text!) {
             DAO.sharedInstance.saveExpenditure(description: description, price: price, category: selectedCategory)
+            self.navigationController?.popViewController(animated: true)
         }
-        self.navigationController?.popViewController(animated: true)
-        
     }
     
 }

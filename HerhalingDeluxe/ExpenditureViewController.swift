@@ -9,7 +9,6 @@
 import UIKit
 
 class ExpenditureViewController: UIViewController {
-
     
     @IBOutlet weak var totalLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -17,13 +16,13 @@ class ExpenditureViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         items = DAO.sharedInstance.getAllExpenditure()
         tableView.reloadData()
+        
         var totaal:Double = 0
         for item in items{
             totaal += item.price
@@ -41,7 +40,6 @@ extension ExpenditureViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let currentCell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        
         let currentExpenditure = items[indexPath.row]
         
         currentCell.textLabel?.text = currentExpenditure.desription
